@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+    <parameter name="browser" value="chrome" />
+    <test name="Regression Test in chrome">
+        <classes>
+            <class name="tests.UsersApisTest">
+                <methods>
+                    <include name="Register" />
+                    <include name="Login" />
+                    <include name="UserProfile"/>
+                    <include name="UpdateUserProfile"/>
+                    <include name="ForgetPassword"/>
+                    <include name="NewPassword"/>
+                    <include name="Logout"/>
+                    <include name="LoginAgainWithNewPassword"/>
+                    <include name="DeleteAccount"/>
+                </methods>
+            </class>
+
+            <class name="tests.NotesApisTest">
+                <methods>
+                    <include name="Register"/>
+                    <include name="Login" />
+                    <include name="CreateNote"/>
+                    <include name="updateNoteById"/>
+                    <include name="CompleteUpdateById"/>
+                    <include name="deleteNote"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
